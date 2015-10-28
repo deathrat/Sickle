@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Class-Path: activation.jar annotations.jar asm-debug-all-5.0.4.jar com
+ mons-codec-1.6.jar controlsfx-8.20.8.jar httpclient-4.2.5.jar httpcor
+ e-4.2.4.jar javaws.jar jsr305.jar jtwitter.jar mail.jar mysql-connect
+ or.jar mysql-connector-java-5.1.23-bin.jar servlet.jar signpost-core.
+ jar sqlite-jdbc-3.8.11.2.jar common.jar server.jar sickle-common.jar
+Premain-Class: com.urcraft.wurm.sickle.server.ServerAgent
+

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: jbullet-1.0.0.jar lwjgl_util-2.9.1.jar PNGDecoder-0.0.1.ja
+ r common.jar vecmath-1.5.2.jar lwjgl-2.9.1.jar jogg-0.0.7.jar asm-deb
+ ug-all-5.0.4.jar jzipupdate-0.9.1.jar irclib-1.10.jar slick-util-b208
+ .jar joXSI-1.0.0.jar jorbis-0.0.15.jar colladabind-1.0.0.jar client.j
+ ar sickle-common.jar
+Premain-Class: com.urcraft.wurm.sickle.client.ClientAgent
