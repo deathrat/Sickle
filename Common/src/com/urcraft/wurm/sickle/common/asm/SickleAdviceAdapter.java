@@ -139,14 +139,13 @@ public abstract class SickleAdviceAdapter extends AdviceAdapter implements ISick
     @Override
     protected void onMethodEnter()
     {
-        System.out.println("Method entered: " + _name);
-        _transformer.onMethodEnter(this);
+//        _transformer.onMethodEnter(this);
     }
 
     @Override
     protected void onMethodExit(int opcode)
     {
-        _transformer.onMethodExit(opcode, this);
+//        _transformer.onMethodExit(opcode, this);
     }
 
     @Override

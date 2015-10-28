@@ -50,7 +50,6 @@ public class ModLoader
                 {
                     Constructor con = c.getConstructor(JarFile.class);
                     Mod mod = (Mod) con.newInstance(jar);
-//                    System.out.println("Loaded mod: " + mod.getMeta().getModName());
                 }
             }
 

@@ -1,7 +1,6 @@
 package com.urcraft.wurm.sickle.client.asm;
 
 
-import com.urcraft.wurm.sickle.client.asm.transformers.ClientTransformer;
 import com.urcraft.wurm.sickle.common.asm.ISickleClassVisitor;
 import com.urcraft.wurm.sickle.common.asm.SickleMethodVisitor;
 import com.urcraft.wurm.sickle.common.asm.transformers.TransformersHandler;
@@ -29,7 +28,6 @@ public class ClientVisitor extends ClassVisitor implements ISickleClassVisitor
     @Override
     public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions)
     {
-        initTransformers();
         if(TransformersHandler.getInstance().transformers.containsKey(_className))
         {
             MethodVisitor mv = cv.visitMethod(access, name, desc, signature, exceptions);
@@ -39,10 +37,6 @@ public class ClientVisitor extends ClassVisitor implements ISickleClassVisitor
         return super.visitMethod(access, name, desc, signature, exceptions);
     }
 
-    private void initTransformers()
-    {
-        new ClientTransformer();
-    }
 
     @Override
     public String getClassName()

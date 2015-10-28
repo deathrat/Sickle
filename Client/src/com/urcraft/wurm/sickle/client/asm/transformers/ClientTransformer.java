@@ -31,16 +31,4 @@ public class ClientTransformer extends SickleTransformer
             mv.visitIntInsn(Opcodes.ASTORE, 1);
         }
     }
-
-    @Override
-    public void onMethodEnter(ISickleMethodVisitor smv)
-    {
-        System.out.println("Method: " + smv.getName() + " entered.");
-    }
-
-    @Override
-    public void onMethodExit(int opcode, ISickleMethodVisitor smv)
-    {
-
-    }
 }

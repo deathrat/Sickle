@@ -24,9 +24,9 @@ public abstract class SickleTransformer
 
     public abstract void visitCode(ISickleMethodVisitor smv);
 
-    public abstract void onMethodEnter(ISickleMethodVisitor smv);
+//    public abstract void onMethodEnter(ISickleMethodVisitor smv);
 
-    public abstract void onMethodExit(int opcode, ISickleMethodVisitor smv);
+//    public abstract void onMethodExit(int opcode, ISickleMethodVisitor smv);
 
     public boolean visitLabel(Label label, ISickleMethodVisitor smv) {return true;}
 
