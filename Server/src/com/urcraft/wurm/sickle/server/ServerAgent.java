@@ -1,11 +1,10 @@
 package com.urcraft.wurm.sickle.server;
 
 import com.urcraft.wurm.sickle.common.SickleCommon;
-import com.urcraft.wurm.sickle.common.asm.transformers.SickleTransformer;
+import com.urcraft.wurm.sickle.common.asm.transformers.TransformersHandler;
 import com.urcraft.wurm.sickle.server.asm.ServerVisitor;
 import com.urcraft.wurm.sickle.server.asm.transformers.CreaturesTransformer;
 import com.urcraft.wurm.sickle.server.asm.transformers.ServerTransformer;
-import com.urcraft.wurm.sickle.common.asm.transformers.TransformersHandler;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
@@ -14,9 +13,6 @@ import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
 import java.lang.instrument.Instrumentation;
 import java.security.ProtectionDomain;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class ServerAgent
 {

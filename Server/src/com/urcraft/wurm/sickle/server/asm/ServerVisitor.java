@@ -1,12 +1,14 @@
 package com.urcraft.wurm.sickle.server.asm;
 
-import com.urcraft.wurm.sickle.common.SickleCommon;
-import com.urcraft.wurm.sickle.common.asm.SickleAdviceAdapter;
 import com.urcraft.wurm.sickle.common.asm.ISickleClassVisitor;
 import com.urcraft.wurm.sickle.common.asm.SickleMethodVisitor;
 import com.urcraft.wurm.sickle.common.asm.transformers.TransformersHandler;
 import com.urcraft.wurm.sickle.common.event.SickleClassVisitEvent;
-import org.objectweb.asm.*;
+import com.urcraft.wurm.sickle.common.event.SickleEventHandler;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
 
 import java.util.ArrayList;
 
@@ -35,7 +37,7 @@ public class ServerVisitor extends ClassVisitor implements ISickleClassVisitor
     {
         if(hasTransformer)
         {
-            SickleCommon.EVENTBUS.post(new SickleClassVisitEvent(this, name, signature, superName, interfaces));
+            SickleEventHandler.getInstance().EVENT_BUS.post(new SickleClassVisitEvent(this, name, signature, superName, interfaces));
             visitedClassesList.add(_className);
         }
         super.visit(version, access, name, signature, superName, interfaces);

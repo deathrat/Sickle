@@ -4,6 +4,7 @@ import com.google.common.eventbus.Subscribe;
 import com.urcraft.wurm.sickle.common.event.InitEvent;
 import com.urcraft.wurm.sickle.common.event.PostInitEvent;
 import com.urcraft.wurm.sickle.common.event.PreInitEvent;
+import com.urcraft.wurm.sickle.common.event.SickleEventHandler;
 import com.urcraft.wurm.sickle.common.json.Json;
 import com.urcraft.wurm.sickle.common.json.JsonArray;
 import com.urcraft.wurm.sickle.common.json.JsonObject;
@@ -28,7 +29,7 @@ public abstract class Mod
             processMod();
             System.out.println("[Sickle] Loaded mod: " + _meta.getModName());
             SickleCommon.addMod(this);
-            SickleCommon.EVENTBUS.register(this);
+            SickleEventHandler.getInstance().EVENT_BUS.register(this);
         } catch (IOException e)
         {
 

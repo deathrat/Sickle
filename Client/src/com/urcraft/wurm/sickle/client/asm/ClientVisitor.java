@@ -2,11 +2,13 @@ package com.urcraft.wurm.sickle.client.asm;
 
 
 import com.urcraft.wurm.sickle.client.asm.transformers.ClientTransformer;
-import com.urcraft.wurm.sickle.common.asm.SickleAdviceAdapter;
 import com.urcraft.wurm.sickle.common.asm.ISickleClassVisitor;
 import com.urcraft.wurm.sickle.common.asm.SickleMethodVisitor;
 import com.urcraft.wurm.sickle.common.asm.transformers.TransformersHandler;
-import org.objectweb.asm.*;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
 
 public class ClientVisitor extends ClassVisitor implements ISickleClassVisitor
 {

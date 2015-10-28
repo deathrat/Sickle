@@ -5,6 +5,7 @@ import com.urcraft.wurm.sickle.common.SickleCommon;
 import com.urcraft.wurm.sickle.common.event.InitEvent;
 import com.urcraft.wurm.sickle.common.event.PostInitEvent;
 import com.urcraft.wurm.sickle.common.event.PreInitEvent;
+import com.urcraft.wurm.sickle.common.event.SickleEventHandler;
 import com.wurmonline.server.Server;
 
 public class SickleServer
@@ -19,9 +20,9 @@ public class SickleServer
         _server = server;
         _loader = new ModLoader();
         _loader.addMods();
-        SickleCommon.EVENTBUS.post(new PreInitEvent());
-        SickleCommon.EVENTBUS.post(new InitEvent());
-        SickleCommon.EVENTBUS.post(new PostInitEvent());
+        SickleEventHandler.getInstance().EVENT_BUS.post(new PreInitEvent());
+        SickleEventHandler.getInstance().EVENT_BUS.post(new InitEvent());
+        SickleEventHandler.getInstance().EVENT_BUS.post(new PostInitEvent());
         System.out.println(SickleCommon.LOG_TAG + "Server Initialized");
     }
 
